@@ -28,6 +28,8 @@ gem 'simple_form'
 gem 'devise'
 # print ruby objects with colour and identation
 gem 'awesome_print'
+# Background processing
+gem 'sidekiq'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
