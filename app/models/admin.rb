@@ -9,9 +9,9 @@ class Admin < ActiveRecord::Base
   after_create :create_account
 
   # Remove this in produciton: admin confirmation is not required for development purposes
-  def confirmation_required?
-  	false
-  end
+  # def confirmation_required?
+  #	  false
+  # end
 
   private
   
