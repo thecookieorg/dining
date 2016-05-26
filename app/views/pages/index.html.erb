@@ -1,0 +1,177 @@
+<p>New Cookie Dining online food ordering system</p>
+<br>
+<p>System will have:</p>
+<ul>
+	<ol>A subdomain type of registrations for restaurants -> Admin model</ol>
+	<ol>User registrations to re-order food --> User model</ol>
+	<ol>ActiveMerchant gem --> for connecting their bank accounts</ol>
+	<ol>Take-out orders only (for now)</ol>
+	<ol>Twilio APIs for order notifications</ol>
+</ul>
+
+<h4>Flow explained</h4>
+<p>A restaurant owner comes to our website, and decides to sign up. They will click the "Get Started" button and be redirected to a registration page. On this page, they will fill in:
+	<ul>
+		<li>Restaurant name [that will be their subdomain]</li>
+		<li>Registration Email</li>
+		<li>Password</li>
+	</ul>
+</p>
+<p>After they have confirmed their account by clicking on a confirmation link from the email, they will be redirected to http://restaurant_name.ourdomain.com/admin where they can login.</p>
+<p>After login, they'll be redirected to their dashboard where they can:
+	<ul>
+		<li>Add location:
+			<ul>
+				<li>Restaurant Name</li>
+				<li>Address</li>
+				<li>Phone Number</li>
+				<li>Website</li>
+				<li>E-mail</li>
+				<li>Hours of operations</li>
+				<li>Facebook URL</li>
+				<li>Twitter URL</li>
+				<li>Instagram URL</li>
+				<li>YouTube URL</li>
+			</ul>
+		</li>
+		<li>Create Menu:
+			<ul>
+				<li>Create Menu Category:
+					<ul>
+						<li>Name</li>
+					</ul>
+				</li>
+				<li>Create Menu Item:
+					<ul>
+						<li>Item Name</li>
+						<li>Description</li>
+						<li>Image</li>
+						<li>Size(s) and Price</li>
+						<li>Tax</li>
+					</ul>
+				</li>
+				<li>Modifiers:
+					<li>Create New:
+						<ul>
+							<li>Name</li>
+							<li>Options:
+								<ul>
+									<li>Name (extra bacon)</li>
+									<li>Size(s) and Price</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>Connect Modifiers With Menu Items:
+						<ul>
+							<li>Simple checkbox on menu items who has modifiers</li>
+						</ul>
+					</li>
+				</li>
+			</ul>
+		</li>
+		<li>Merchant Account:
+			<ul>
+				<li>Choose your payment processor:
+					<ul>
+						<li>Elavon</li>
+						<li>Chase</li>
+						<li>Beanstream</li>
+						<li>Moneris</li>
+						<li>Chase Paymentech</li>
+						<li>Authorize.net</li>
+						<li>Axcess MS</li>
+						<li>Bank Frick</li>
+						<li>Barclays</li>
+						<li>Be2Bill</li>
+						<li>BluePay</li>
+						<li>Borgun</li>
+						<li>Braintree</li>
+						<li>BridgePay</li>
+						<li>Cardknox</li>
+						<li>CardSave</li>
+						<li>CardStream</li>
+						<li>Cashnet</li>
+						<li>Cecabank</li>
+						<li>Genpos</li>
+						<li>CAMS</li>
+						<li>Checkout.com</li>
+						<li>Clearhaus</li>
+						<li>Commercegate</li>
+						<li>Conekta</li>
+						<li>CyberSource</li>
+						<li>DIBS</li>
+						<li>DataCash</li>
+						<li>Efsnet</li>
+						<li>ePay</li>
+						<li>EVO Canada</li>
+						<li>eWAY</li>
+						<li>E-xact</li>
+						<li>Ezic</li>
+						<li>Fat Zebra</li>
+						<li>Federated Canada</li>
+						<li>Finansbank WebPOS</li>
+						<li>Flo2Cash</li>
+						<li>1stPayGateway.net</li>
+						<li>FirstData Global Gateway</li>
+						<li>FirstGiving</li>
+						<li>Garanti Sanal POS</li>
+						<li>Global Transport</li>
+						<li>HDFC</li>
+						<li>Heartland Payment Systems</li>
+						<li>iATS Payments</li>
+						<li>Inspire Commerce</li>
+						<li>InstaPay</li>
+						<li>IPP</li>
+						<li>Iridium</li>
+						<li>iTransact</li>
+						<li>JetPay</li>
+						<li>Komoju</li>
+						<li>LinkPoint</li>
+						<li>Litle &amp; Co.</li>
+						<li>maxiPago!</li>
+						<li>Merchant e-Solutions</li>
+						<li>Merchant One Gateway</li>
+						<li>MerchantWARE</li>
+						<li>MerchantWarrior</li>
+						<li>Mercury</li>
+						<li>Metrics Global</li>
+						<li>MasterCard Internet Gateway Service (MiGS)</li>
+						<li>Modern Payments</li>
+						<li>MONEI</li>
+						<li>MoneyMovers</li>
+						<li>NAB Transact</li>
+						<li>NELiX TransaX</li>
+						<li>NetRegistry</li>
+						<li>BBS Netaxept</li>
+						<li>NETbilling</li>
+						<li>NETPAY Gateway</li>
+						<li>NMI</li>
+						<li>Optimal Payments</li>
+						<li>PayConex</li>
+						<li>PayGate PayXML</li>
+						<li>PayHub</li>
+						<li>PayJunction</li>
+						<li>Payeezy</li>
+						<li>PaymentExpress</li>
+						<li>PAYMILL</li>
+						<li>PayPal Express Checkout</li>
+						<li>PayPal Payflow Pro</li>
+						<li>PayPal Website Payments Pro</li>
+						<li>Payscout</li>
+						<li>QuickBooks Merchant Services</li>
+						<li>QuickBooks Payments</li>
+						<li>SagePay</li>
+						<li>Sage Payment Solutions</li>
+						<li>Stripe</li>
+						<li>Swipe</li>
+						<li>WePay</li>
+						<li>Wordpay Global</li>
+						<li>Wirecard</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</p>
+
