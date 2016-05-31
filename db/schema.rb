@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526224218) do
+ActiveRecord::Schema.define(version: 20160531202917) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,33 @@ ActiveRecord::Schema.define(version: 20160526224218) do
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
 
+  create_table "locations", force: :cascade do |t|
+    t.string   "restaurant_name"
+    t.string   "restaurant_phone_number"
+    t.string   "restaurant_address"
+    t.text     "about"
+    t.string   "contact_email"
+    t.string   "website"
+    t.string   "facebook"
+    t.string   "instagram"
+    t.boolean  "accept_takeout",          default: true
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.integer  "term_id"
+  end
+
+  add_index "locations", ["term_id"], name: "index_locations_on_term_id", using: :btree
+
+  create_table "terms", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "location_id"
+  end
+
+  add_index "terms", ["location_id"], name: "index_terms_on_location_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -63,4 +90,6 @@ ActiveRecord::Schema.define(version: 20160526224218) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "locations", "terms"
+  add_foreign_key "terms", "locations"
 end

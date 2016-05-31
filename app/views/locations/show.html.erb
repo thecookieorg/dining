@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Restaurant name:</strong>
+  <%= @location.restaurant_name %>
+</p>
+
+<p>
+  <strong>Restaurant phone number:</strong>
+  <%= @location.restaurant_phone_number %>
+</p>
+
+<p>
+  <strong>Restaurant address:</strong>
+  <%= @location.restaurant_address %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @location.about %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @location.contact_email %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @location.website %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @location.facebook %>
+</p>
+
+<p>
+  <strong>Instagram:</strong>
+  <%= @location.instagram %>
+</p>
+
+<p>
+  <strong>Accept takeout:</strong>
+  <%= @location.accept_takeout %>
+</p>
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>

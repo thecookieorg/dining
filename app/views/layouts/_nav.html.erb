@@ -1,8 +1,15 @@
-<ul>
-	<li><%= link_to "Get Started (as a restaurant)", new_admin_registration_path %></li>
-	<li><%= link_to "Restaurant Sign In", new_admin_session_path %></li>
-	<li><%= link_to "Logout (as a restaurant)", destroy_admin_session_path, method: :delete %></li>
-	<li><%= link_to "User Registration", new_user_registration_path %></li>
-	<li><%= link_to "User Sign In", new_user_session_path %></li>
-	<li><%= link_to "Logout User", destroy_user_session_path, method: :delete %></li>
-</ul>
+<% if admin_signed_in? %>
+	<ul>
+		<li><%= link_to "Logout (as a restaurant)", destroy_admin_session_path, method: :delete %></li>
+		<li><%= link_to "Home", root_path %></li>
+	</ul>
+<% else %>
+	<ul>
+		<li><%= link_to "Get Started (as a restaurant)", new_admin_registration_path %></li>
+		<li><%= link_to "Restaurant Sign In", new_admin_session_path %></li>
+		<li><%= link_to "Logout (as a restaurant)", destroy_admin_session_path, method: :delete %></li>
+		<li><%= link_to "User Registration", new_user_registration_path %></li>
+		<li><%= link_to "User Sign In", new_user_session_path %></li>
+		<li><%= link_to "Logout User", destroy_user_session_path, method: :delete %></li>
+	</ul>
+<% end %>

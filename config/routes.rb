@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :terms
+  resources :locations
   get 'dashboards/index'
 
   devise_for :users

@@ -1,0 +1,25 @@
+<%= simple_form_for(@location) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :restaurant_name %>
+    <%= f.input :restaurant_phone_number %>
+    <%= f.input :restaurant_address %>
+    <%= f.input :about %>
+    <%= f.input :contact_email %>
+    <%= f.input :website %>
+    <%= f.input :facebook %>
+    <%= f.input :instagram %>
+    <%= f.input :accept_takeout %>
+
+    <%= f.collection_select :term_id, Term.all, :id, :name %>
+    <%# f.association :terms, :include_blank => false %>
+    <%# f.association :terms, :label_method => :name, :value_method => :id %>
+    <%# f.association :terms, :include_blank => false %>
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
